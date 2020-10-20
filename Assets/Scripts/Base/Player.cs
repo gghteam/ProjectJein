@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player
 {
     public long calcium = 0;
+    public long calciumPerClick = 1;
     public float jeinHeight = 154.4f;
     public Doll[] dolls;
 }
