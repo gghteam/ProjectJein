@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         player = new Player();
         filePath = string.Concat(Application.persistentDataPath, "/", "Save154.txt");
+        OnClickLoad();
         Debug.Log("filePath : " + filePath);
     }
 
@@ -57,5 +58,10 @@ public class GameManager : MonoBehaviour
         player = JsonUtility.FromJson<Player>(jsonString);
 
         UpdateCalcium();
+    }
+
+    private void OnApplicationQuit()
+    {
+        OnClickSave();
     }
 }
