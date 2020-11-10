@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private Player player;
     [SerializeField]
     private Text textCalcium;
+    [SerializeField]
+    private GameObject panelPurchase;
 
     private string filePath = "";
 
@@ -63,5 +65,10 @@ public class GameManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         OnClickSave();
+    }
+
+    public void ActivePurchasePanel() 
+    {
+        panelPurchase.SetActive(!panelPurchase.activeInHierarchy);
     }
 }
